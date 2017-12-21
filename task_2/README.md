@@ -31,7 +31,7 @@ Files in a "task_2" directory
 How to build
 -----------------------------
 
-- Be sure you you have Python 2.7+ is installed
+- Be sure you have Python 2.7+ installed
 - `cd /path/to/task_2`
 - `python ./festival_names.py input.txt`
     

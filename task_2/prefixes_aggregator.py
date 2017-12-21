@@ -20,7 +20,7 @@ def _shared_prefix_words(str1, str2):
         return s1[:space_idx].rstrip()
 
 
-def unifier(gen):
+def aggregator(gen):
     pattern = ''
     prev_line = ''
 
@@ -47,13 +47,13 @@ def unifier(gen):
 def process_file(file_name):
     r = []
     with codecs.open(file_name, encoding='utf-8') as f:
-        for prefix in unifier(f):
+        for prefix in aggregator(f):
             r.append(prefix)
     return r
 
 
 def process_text(text):
     r = []
-    for prefix in unifier(iter(text.splitlines())):
+    for prefix in aggregator(iter(text.splitlines())):
         r.append(prefix)
     return r

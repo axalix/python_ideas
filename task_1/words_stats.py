@@ -3,7 +3,6 @@ import codecs
 from collections import Counter
 
 
-
 class WordsStats:
 
     def __init__(self):

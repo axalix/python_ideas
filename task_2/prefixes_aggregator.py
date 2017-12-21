@@ -6,15 +6,14 @@ def _shared_prefix_words(str1, str2):
     space_idx = 0
     s1 = min(str1, str2)
     s2 = max(str1, str2)
-    space = re.compile(r'\s')
 
     for i, c in enumerate(s1):
-        if space.match(c):
+        if c.isspace():
             space_idx = i
         if c != s2[i]:
             return s1[:space_idx].rstrip()
 
-    if s1 == s2 or space.match(s2[len(s1)]):
+    if s1 == s2 or s2[len(s1)].isspace():
         return s1.rstrip()
     else:
         return s1[:space_idx].rstrip()

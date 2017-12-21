@@ -32,7 +32,7 @@ Files in a "task_1" directory
 How to build
 -----------------------------
 
-- Be sure you you have Python 2.7+ is installed
+- Be sure you have Python 2.7+ installed
 - `cd /path/to/task_1`
 - `python ./word_counter.py input.txt`
     

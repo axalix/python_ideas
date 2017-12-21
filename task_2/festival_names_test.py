@@ -44,12 +44,12 @@ WayHome Music Festival Saturday Only with Imagine Dragons, Vance Joy, Solange an
 
     def test_text_original(self):
         self.assertEqual(unique_prefixes.process_text(self.test_str_original),
-                         [
-                            'Lollapalooza',
-                            'Osheaga Music and Arts Festival',
-                            'The Meadows Music and Arts Festival',
-                            'WayHome Music Festival'
-                          ])
+             [
+                'Lollapalooza',
+                'Osheaga Music and Arts Festival',
+                'The Meadows Music and Arts Festival',
+                'WayHome Music Festival'
+              ])
 
     def test_text_new_lines_gaps(self):
         test_str = """
@@ -96,6 +96,14 @@ a
     def test_file_missing_handles_ErrorException(self):
         with self.assertRaises(IOError):
             unique_prefixes.process_file('missing_file.txt')
+
+    def test_file(self):
+        self.assertEqual(unique_prefixes.process_file('festival_names_test_input.txt'), [
+            'Lollapalooza',
+            'Osheaga Music and Arts Festival',
+            'The Meadows Music and Arts Festival',
+            'WayHome Music Festival'
+        ])
 
 
 if __name__ == '__main__':

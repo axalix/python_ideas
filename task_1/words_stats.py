@@ -21,8 +21,8 @@ class WordsStats:
     def process_line(self, line):
         if not line:
             return
-        for word in re.sub(r'[^\s\w]', ' ', line, flags=re.UNICODE).split():
-            self.counter[word.lower()] += 1
+        for word in re.sub(r'[^\s\w]', ' ', line.lower(), flags=re.UNICODE).split():
+            self.counter[word] += 1
             self.words_number += 1
 
     def total_words(self):

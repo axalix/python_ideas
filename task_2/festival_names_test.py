@@ -26,7 +26,6 @@ WayHome Music Festival Friday Only with Flume, Cage the Elephant, Justice and mo
 WayHome Music Festival Saturday Only with Imagine Dragons, Vance Joy, Solange and more'
 """
 
-
     # Lollapalooza
     # Osheaga Music and Arts Festival
     # The Meadows Music and Arts Festival
